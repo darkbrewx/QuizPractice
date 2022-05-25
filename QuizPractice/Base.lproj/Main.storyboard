@@ -129,6 +129,9 @@
                             <constraint firstItem="kMp-Va-NpN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="M3Z-ip-F6B" secondAttribute="leading" id="uDP-jo-H0Z"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="quizText" destination="qde-6W-Aph" id="xiO-6J-AVI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R3Q-aq-652" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
