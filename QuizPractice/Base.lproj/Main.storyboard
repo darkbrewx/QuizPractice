@@ -130,7 +130,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="quizText" destination="qde-6W-Aph" id="xiO-6J-AVI"/>
+                        <outlet property="answerButton1" destination="Fu3-DO-mar" id="dEF-kO-eTP"/>
+                        <outlet property="answerButton2" destination="tIQ-Uo-qQj" id="6EI-aG-HUn"/>
+                        <outlet property="answerButton3" destination="9JZ-Eq-XdZ" id="Osd-g4-z3X"/>
+                        <outlet property="answerButton4" destination="6C8-99-Lmq" id="P3O-Tl-v1L"/>
+                        <outlet property="quizNumberLabel" destination="kMp-Va-NpN" id="nLd-FA-DIn"/>
+                        <outlet property="quizTextView" destination="qde-6W-Aph" id="DVE-CQ-4E8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R3Q-aq-652" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
