@@ -8,22 +8,23 @@
 import UIKit
 
 class ScoreViewController: UIViewController {
+    
+    var correct = 0
 
+    @IBOutlet weak var scoreCountLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        scoreCountLabel.text = "\(correct)問正解"
+        
+        
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+    @IBAction func toTopButtonAction(_ sender: Any) {
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true)
     }
-    */
-
 }

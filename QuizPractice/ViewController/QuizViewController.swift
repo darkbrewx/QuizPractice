@@ -19,6 +19,7 @@ class QuizViewController: UIViewController {
     var csvArray: [String] = []
     var quizArray: [String] = []
     var quizCount = 0
+    var correctCount = 0
     
     
     override func viewDidLoad() {
@@ -27,6 +28,12 @@ class QuizViewController: UIViewController {
         setQuiz()
 
         // Do any additional setup after loading the view.
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let scoreVC = segue.destination as! ScoreViewController
+        scoreVC.correct = correctCount
     }
     
     // set quiz on view
@@ -44,7 +51,7 @@ class QuizViewController: UIViewController {
         
         // check the answer
         if sender.tag == Int(quizArray[1]){
-            print("right")
+            correctCount += 1
         } else {
             print("wrong")
         }

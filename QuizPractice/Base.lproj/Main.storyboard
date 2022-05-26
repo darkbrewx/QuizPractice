@@ -42,6 +42,7 @@
                             <constraint firstItem="A1I-iN-P5P" firstAttribute="centerX" secondItem="TgO-Um-QYy" secondAttribute="centerX" id="yqJ-cU-Sug"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="8nt-4L-YWD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -140,7 +141,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R3Q-aq-652" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="747.82608695652175" y="56.919642857142854"/>
+            <point key="canvasLocation" x="839" y="57"/>
         </scene>
         <!--Score View Controller-->
         <scene sceneID="2Ff-bX-9hr">
@@ -162,6 +163,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="トップに戻る">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="50"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="toTopButtonAction:" destination="9AT-cq-x8m" eventType="touchUpInside" id="hkL-xu-dgp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="d6F-53-YUj"/>
@@ -173,10 +177,13 @@
                             <constraint firstItem="Lo1-ey-cIh" firstAttribute="centerY" secondItem="qn4-JG-I9m" secondAttribute="centerY" constant="141.25" id="r4f-WC-GNM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scoreCountLabel" destination="Ltp-de-F6n" id="B90-uO-hLe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zrp-0s-0Pc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1549" y="66"/>
+            <point key="canvasLocation" x="1641" y="57"/>
         </scene>
     </scenes>
     <resources>
