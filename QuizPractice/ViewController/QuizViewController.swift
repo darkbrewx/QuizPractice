@@ -24,7 +24,13 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         csvArray = loadCSV(fileName: "quiz")
-        print(csvArray)
+        setQuiz()
+
+        // Do any additional setup after loading the view.
+    }
+    
+    // set quiz on view
+    func setQuiz(){
         quizArray = csvArray[quizCount].components(separatedBy: ",")
         quizNumberLabel.text = "第\(quizCount + 1)問"
         quizTextView.text = quizArray[0]
@@ -32,13 +38,35 @@ class QuizViewController: UIViewController {
         answerButton2.setTitle(quizArray[3], for: .normal)
         answerButton3.setTitle(quizArray[4], for: .normal)
         answerButton4.setTitle(quizArray[5], for: .normal)
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func btnAction(_ sender: UIButton) {
+        
+        // check the answer
+        if sender.tag == Int(quizArray[1]){
+            print("right")
+        } else {
+            print("wrong")
+        }
+        nextQuiz()
         print(sender.tag)
     }
+    
+    // set the next quiz
+    func nextQuiz() {
+        quizCount += 1
+        if quizCount < csvArray.count {
+            setQuiz()
+        } else {
+            toScoreView()
+        }
+    }
+    
+    func toScoreView(){
+        performSegue(withIdentifier: "toScoreVC", sender: nil)
+        
+    }
+    
     
     func loadCSV(fileName: String) -> [String] {
         let csvBundle = Bundle.main.path(forResource: fileName, ofType: "csv")!
